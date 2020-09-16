@@ -1,0 +1,182 @@
+<!--I'm boro js-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Instagram</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link href="d.png" rel="icon" type="image/png"/>
+		
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	  	  <style type="text/css">
+	  	    .image-upload > input
+	  	    {
+	  	        display: none;
+	  	    }
+
+	  	    .image-upload img
+	  	    {
+	  	        
+	  	        cursor: pointer;
+	  	    }
+	  	    @media screen and (max-width: 2000px) {
+	  	      body {
+	  	        width:50%;
+				margin:0 auto; 
+	  	      }
+	  	    }
+	  	    @media screen and (max-width: 600px) {
+	  	      body {
+	  	        width:100%;
+				margin:0 auto; 
+	  	      }
+	  	    }
+			 
+	  	  </style>
+</head>
+<body>
+
+<!--<img src="love.png">
+<img src="com.png">-->
+<hr>
+<section>
+	<div>
+		<span class="image-upload" accept="image/*">
+		    <label for="getimage">
+		      	<img id='p7' class="ml-3" style="border-radius: 50%;position: static;" src="dp.jpg" type="image" width="40" height="40"> 
+		    </label>
+		    <input id="getimage" type="file"/>
+		</span>
+		<span id="head3" onclick="head3();" style=" font-size: 14px;font-family:Helvetica;" class="align-middle">experiya117</span>
+		<span><img src="right.png" style="width: 14px;"></span>
+		<span><img src="dot.png" style="width: 6px;"></span>
+		<span id="" onclick="" style=" font-size: 15px; font-family:Helvetica;" class="align-middle text-primary">Follow</span>
+		
+		<span><img src="more.png" style="width: 14px; margin-top: 13px;" class="float-right mr-3"></span>
+		
+		<!--<i style="width: 15px;" class="zmdi zmdi-more right_more"></i>-->
+	</div>
+	  <!--<span class="image-upload" accept="image/*">
+	      <label for="getimage">
+	          
+	          <img id="p9" src="p.jpg" class="mx-auto my-auto img-thumbnail" style="">
+	          
+	      </label>
+	      <input id="getimage" type="file"/>
+	  </span>-->
+	  	<input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
+	  	      <label for="file" style="cursor: pointer; position: static;">
+	  			<img id="pics" src="p.jpg" style="width:100%;">
+	  		</label>
+	  <script>
+	  var loadFile = function(event) {
+	    var image = document.getElementById('pics');
+	    image.src = URL.createObjectURL(event.target.files[0]);
+	  };
+	  </script>
+	  <div class="ml-1">
+	  	<span style=" position: static;"><img src="l.png" style="width: 55px;"></span>
+	  	<span style="position: absolute; margin-left: -12px;"><img src="r.png" style="width: 55px;"></span>
+	  	<span style="position: absolute; margin-left: 30px;"><img src="t.png" style="width: 55px;"></span>
+	  	<span><img src="b.png" style="width: 55px; float: right;"></span><br>
+	  	<span style="margin-left: 12px; font-size: 14px; position: absolute; letter-spacing: 0px; font-family:Helvetica;" >
+	  		<span id="like" onclick="like();">2,0849</span> likes</span><br>
+	  	<div style="margin-left: 12px;" class="mr-3">
+	  		<span style="font-size: 14px ;font-family:Helvetica;" id="name" onclick="name();">experiya117</span> <span style="font-family:Helvetica;font-size: 13.5px; opacity: 0.8;" id="status" onclick="status();">Are you striving for that blue tick from Instagram ! Here it is</span><br>
+	  		<span style="font-size: 13.5px ;font-family:Helvetica; opacity: 0.5">View all <span id="c2" onclick="c2();">577</span> commments</span>
+	  	</div>
+	  	
+	  </div>
+	  <div>
+	  	
+	  </div>
+          
+</section>
+
+</body>
+</html>
+<script type="text/javascript">
+  var imageLoader = document.getElementById('getimage');
+  imageLoader.addEventListener('change', handleImage, false);
+
+  function handleImage(e){
+      var reader = new FileReader();
+      reader.onload = function(event){
+          var img = new Image();
+          img.onload = function(){
+              document.getElementById("p7").src =img.src; 
+
+          }
+          img.src = event.target.result;
+      }
+      reader.readAsDataURL(e.target.files[0]);     
+  }
+</script>
+<script type="text/javascript">
+
+
+
+	    var imageLoader = document.getElementById('getimage');
+	    imageLoader.addEventListener('change', handleImage, false);
+
+
+	    function handleImage(e){
+	        var reader = new FileReader();
+	        reader.onload = function(event){
+	            var img = new Image();
+	            img.onload = function(){
+	                document.getElementById("p9").src =img.src; 
+
+	            }
+	            img.src = event.target.result;
+	        }
+	        reader.readAsDataURL(e.target.files[0]);     
+	    }
+	  
+
+	function name(){
+    var n = prompt("Input :", "");
+    if(n!=null){
+    document.getElementById("name").innerHTML = n;
+      }
+    }
+    	function status(){
+        var n = prompt("Input :", "");
+        if(n!=null){
+        document.getElementById("status").innerHTML = n;
+          }
+        }
+        	function c2(){
+            var n = prompt("Input :", "");
+            if(n!=null){
+            document.getElementById("c2").innerHTML = n;
+              }
+            }
+            function head4(){
+            var n = prompt("Input :", "");
+            if(n!=null){
+            document.getElementById("head4").innerHTML = n;
+              }
+            }
+    	function like(){
+        var n = prompt("Input :", "");
+        if(n!=null){
+        document.getElementById("like").innerHTML = n;
+          }
+        }
+        function head3(){
+            var n = prompt("Input :", "");
+            if(n!=null){
+            document.getElementById("head3").innerHTML = n;
+              }
+            }
+        	function dlike(){
+            var n = prompt("Input :", "");
+            if(n!=null){
+            document.getElementById("dlike").innerHTML = n;
+              }
+            }
+
+
+</script>
